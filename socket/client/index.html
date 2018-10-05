@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script src="./socket.io.js"></script>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST",'http://127.0.0.1:8080/user',true);
+		xhr.onreadystatechange = function(){
+			console.log(231321312)
+			if(xhr.readyState == 4 && xhr.status == 200){
+				console.log(xhr.responseText,'请求数据')
+			}
+		}
+		xhr.send("string:123123");
+		console.log(321321321)
+	</script>
+	<script>
+		// let socket = io('http://127.0.0.1:8080');
+		// socket.on('connect',function(){
+		// 	console.log('已经连接')
+		// });
+		// socket.on('disconnect', ()=>{
+		//   console.log('client disconnect');
+		// });
+		// socket.emit('login',{userName:'111'});
+		// socket.emit('message','wofa',function(data){
+		// 	console.log(data,'返回信息');
+		// });
+	</script>
+</body>
+</html>
