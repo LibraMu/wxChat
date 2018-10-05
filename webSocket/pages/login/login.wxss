@@ -1,0 +1,45 @@
+/* pages/login/login.wxss */
+.logo{
+	width: 400rpx;
+	height: 400rpx;
+	background: #eee;
+	margin: 80rpx auto;
+}
+.content{
+	width: 80%;
+	margin: 0 auto;
+}
+.tab_nav{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20rpx;
+}
+.tab_nav view{
+	flex: 1;
+	font-size: 28rpx;
+	text-align: center;
+	line-height: 80rpx;
+	border-bottom: 2rpx solid #777;
+}
+.tab_nav view.tab_active{
+	border-bottom: 2rpx solid red;
+	color: red;
+}
+.form view{
+	border: 2rpx solid #eee;
+	border-radius: 10rpx;
+	margin-bottom: 20rpx;
+	line-height: 60rpx;
+}
+.form input{
+	font-size: 26rpx;
+	padding-left: 20rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+}
+.submit_btn{
+	line-height: 70rpx;
+	background: #FF4C50;
+	color: #fff;
+	font-size: 28rpx;
+}

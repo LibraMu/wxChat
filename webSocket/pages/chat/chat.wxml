@@ -1,0 +1,42 @@
+<!--pages/chat/chat.wxml-->
+<view class='container'>
+  <!-- <view> -->
+  	<!-- <view wx:for='{{content}}' wx:key='index'> -->
+  	<view class='content_box'>
+  		
+  		<scroll-view scroll-y style="height:100%;" scroll-top="{{maxHeight}}">
+  			<view class='content_item' wx:for='{{content}}' wx:key='index'>
+  			<view wx:if='{{item.isMysely}}' class='mysely_content'>
+	  			<view class='layout my_layout'>
+	  				<view class='msg'>
+	  					<text>{{item.message}}</text>
+	  				</view>
+	  				<view class='header_img'>
+	  					<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538137577168&di=1382d6d2e3047deeb04af5174c6c115e&imgtype=jpg&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D083f749f0024ab18e016e13f05fbe69a%2F4e280cf3d7ca7bcb501f5696b7096b63f724a8cd.jpg'></image>
+	  				</view>
+	  			</view>
+	  		</view>
+	  		<view wx:else class='client_content'>
+	  			<view class='client_layout layout'>
+	  				<view class='header_img'>
+	  					<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538137602016&di=3ca413a0873d123fdbc30eefea33de43&imgtype=0&src=http%3A%2F%2Fimg.qq1234.org%2Fuploads%2Fallimg%2F140326%2F15521U603-14.jpg'></image>
+	  				</view>
+	  				<view class='msg'>
+	  					<text>{{item.message}}</text>
+	  				</view>
+	  			</view>
+	  		</view>
+  		</view>
+  		</scroll-view>
+	  	<!-- <view class='content_item'>
+	  		
+	  	</view> -->
+  	</view>
+  <!-- </view> -->
+  <view class='floor_menu'>
+  	<view class='input_box'>
+  		<input class="content_input" type='text' bindinput='changeTalk' adjust-position='false' confirm-type='发送' bindconfirm="submitMsg" cursor-spacing='50'></input>
+  	</view>
+	<button class='send_btn' bindtap='submitMsg'>提交</button>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <view class='logo'></view>
+  <view class='content'>
+  	<view class='tab_nav'>
+  		<view class='{{tabIndex == 0 ? "tab_active":""}}' bindtap='changeTab' data-index='0'>注册</view>
+  		<view class='{{tabIndex == 1 ? "tab_active":""}}' bindtap='changeTab' data-index='1'>登录</view>
+  	</view>
+  	<view class='input_box'>
+  		<block wx:if='{{tabIndex == 0}}'>
+  			<form class='form' bindsubmit='submitRegister'>
+	  			<view>
+		  			<input type="number" name="phone" placeholder="输入手机号" />
+		  		</view>
+		  		<view>
+		  			<input type="password" name="password" placeholder="输入密码" />
+		  		</view>
+		  		<view>
+		  			<input type="password" name="comfirmPassword"  placeholder="确认密码" />
+		  		</view>
+		  		<button class='submit_btn' formType='submit'>注册</button>
+	  		</form>
+  		</block>
+	  	<block wx:else>
+	  		<form class='form' bindsubmit='submitLogin'>
+	  			<view>
+		  			<input type="number" name="phone" placeholder="输入手机号"/>
+		  		</view>
+		  		<view>
+		  			<input type="password" name="password" placeholder="输入密码"/>
+		  		</view>
+		  		<button class='submit_btn' formType='submit'>登录</button>
+	  		</form>
+	  	</block>
+  	</view>
+
+  </view>
+
+</view>
